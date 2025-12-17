@@ -16,10 +16,7 @@ GOOGLE_API_KEY = os.getenv("AIzaSyCZeQ87rINQqYmaFq_i9BzNNigOdkNVQao")
 WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 WEBHOOK_PATH = "/webhook"
 
-# --- TEKSHIRUV ---
-if not API_TOKEN or not GOOGLE_API_KEY:
-    logging.error("XATOLIK: Tokenlar topilmadi! Render Environment Variables bo'limini tekshiring.")
-    sys.exit(1)
+
 
 # Gemini sozlash
 genai.configure(api_key=GOOGLE_API_KEY)
@@ -149,4 +146,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
